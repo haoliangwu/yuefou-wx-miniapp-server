@@ -1,0 +1,47 @@
+{
+    "name": "koa-weapp-demo",
+    "version": "1.0.0",
+    "description": "",
+    "main": "app.js",
+    "scripts": {
+        "start": "pm2 startOrGracefulReload ecosystem.config.js",
+        "dev": "dotenv -- nodemon --config nodemon.json app.js",
+        "debug": "dotenv -- nodemon --inspect --config nodemon.json app.js",
+        "initdb": "yarn install && node tools/initdb.js"
+    },
+    "author": "Jason",
+    "license": "MIT",
+    "dependencies": {
+        "@types/koa": "^2.0.45",
+        "@types/koa-router": "^7.0.27",
+        "apollo-boost": "^0.1.4",
+        "apollo-cache-inmemory": "^1.1.12",
+        "apollo-client": "^2.2.8",
+        "apollo-link": "^1.2.1",
+        "apollo-link-http": "^1.5.3",
+        "axios": "^0.15.3",
+        "global": "^4.3.2",
+        "graphql": "^0.13.2",
+        "graphql-tag": "^2.8.0",
+        "knex": "^0.13.0",
+        "koa": "^2.0.0",
+        "koa-bodyparser": "^3.2.0",
+        "koa-log4": "^2.1.0",
+        "koa-router": "^7.0.1",
+        "lodash": "^4.17.4",
+        "mkdir-p": "0.0.7",
+        "mysql": "^2.14.1",
+        "node-fetch": "^2.1.2",
+        "nodemon": "^1.17.3",
+        "pify": "^2.3.0",
+        "wafer-node-sdk": "^1.1.1"
+    },
+    "devDependencies": {
+        "babel-eslint": "^7.1.0",
+        "debug": "^2.6.8",
+        "eslint": "^3.9.1",
+        "eslint-config-standard": "^6.2.1",
+        "eslint-plugin-promise": "^3.3.1",
+        "eslint-plugin-standard": "^2.0.1"
+    }
+}
