@@ -33,8 +33,8 @@ module.exports = {
             'user': 'ubuntu',
             'host': '58.87.91.173',
             'ref': 'origin/staging',
-            'repo': 'git@github.com:haoliangwu/yuefou-wx-miniapp.git',
-            'path': '/home/ubuntu/yuefou-wx-miniapp',
+            'repo': 'git@github.com:haoliangwu/yuefou-wx-miniapp-server.git',
+            'path': '/home/ubuntu/yuefou-wx-miniapp-server',
             'ssh_options': ['StrictHostKeyChecking=no', 'PasswordAuthentication=no'],
             'post-deploy': 'yarn install && yarn start',
             'env': {
