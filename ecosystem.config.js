@@ -16,7 +16,8 @@ module.exports = {
             'watch': true,
             'ignore_watch': ['tmp', 'node_modules'],
             'env': {
-                'NODE_ENV': 'development'
+                'NODE_ENV': 'development',
+                'DEBUG': '*,-nodemon:*,-nodemon,-knex:pool'
             },
             'engines': {
                 'node': '>=7.6'
@@ -38,7 +39,8 @@ module.exports = {
             'ssh_options': ['StrictHostKeyChecking=no', 'PasswordAuthentication=no'],
             'post-deploy': 'yarn install && yarn start',
             'env': {
-                'NODE_ENV': 'development'
+                'NODE_ENV': 'development',
+                'DEBUG': '*,-nodemon:*,-nodemon,-knex:pool'
             }
         }
     }
