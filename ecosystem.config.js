@@ -16,7 +16,7 @@ module.exports = {
             'watch': true,
             'ignore_watch': ['tmp', 'node_modules'],
             'env': {
-                'NODE_ENV': 'staging'
+                'NODE_ENV': 'development'
             },
             'engines': {
                 'node': '>=7.6'

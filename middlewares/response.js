@@ -5,7 +5,7 @@ const debug = require('debug')('koa-weapp-demo')
  */
 module.exports = async function (ctx, next) {
     try {
-        // 调用下一个 middleware
+    // 调用下一个 middleware
         await next()
 
         // 处理响应结果
@@ -16,10 +16,10 @@ module.exports = async function (ctx, next) {
             data: ctx.state.data !== undefined ? ctx.state.data : {}
         }
     } catch (e) {
-        // ctx        // catch 住全局的错误信息
+    // ctx        // catch 住全局的错误信息
         const { graphQLErrors, networkError } = e
 
-        if (graphQLErrors) {
+        if (graphQLErrors && graphQLErrors.length > 0) {
             graphQLErrors.map(({ message, locations, path }) =>
                 debug(`[GraphQL error]: Message: ${message}, Location: ${locations}, Path: ${path}`)
             )
@@ -30,12 +30,16 @@ module.exports = async function (ctx, next) {
                 errors: graphQLErrors
             }
         } else if (networkError) {
-            debug(`[Network error]: ${networkError}`)
+            const errors = networkError.result.errors || []
 
-            ctx.status = e.statusCode
+            errors.map(({ message }) =>
+                debug(`[Network error]: Message: ${message}`)
+            )
+
+            ctx.status = networkError.statusCode
             ctx.body = {
                 message: e && e.message ? e.message : e.toString(),
-                errors: e && e.errors ? e.errors : []
+                errors
             }
         } else {
             // 设置状态码为 200 - 服务端错误
