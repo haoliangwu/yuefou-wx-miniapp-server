@@ -38,7 +38,7 @@ module.exports = {
             'ssh_options': ['StrictHostKeyChecking=no', 'PasswordAuthentication=no'],
             'post-deploy': 'yarn install && yarn start',
             'env': {
-                'NODE_ENV': 'staging'
+                'NODE_ENV': 'development'
             }
         }
     }
