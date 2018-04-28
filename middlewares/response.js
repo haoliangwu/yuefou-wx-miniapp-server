@@ -32,10 +32,10 @@ module.exports = async function (ctx, next) {
         } else if (networkError) {
             debug(`[Network error]: ${networkError}`)
 
-            ctx.status = networkError.statusCode
+            ctx.status = e.statusCode
             ctx.body = {
                 message: e && e.message ? e.message : e.toString(),
-                errors: networkError.result.errors
+                errors: e && e.errors ? e.errors : []
             }
         } else {
             // 设置状态码为 200 - 服务端错误
