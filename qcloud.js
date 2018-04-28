@@ -1,5 +1,6 @@
 const fs = require('fs')
-const qcloud = process.env.NODE_ENV === 'production' ? require('wafer-node-sdk') : require('./tools/wafer-node-sdk')
+// const qcloud = process.env.NODE_ENV === 'production' ? require('wafer-node-sdk') : require('./tools/wafer-node-sdk')
+const qcloud = require('./tools/wafer-node-sdk')
 
 // 获取基础配置
 const configs = require('./config')
