@@ -17,7 +17,7 @@ module.exports = {
             'ignore_watch': ['tmp', 'node_modules'],
             'env': {
                 'NODE_ENV': 'development',
-                'DEBUG': '*,-nodemon:*,-nodemon,-knex:pool'
+                'DEBUG': 'yuefou-wx-miniapp-server'
             },
             'engines': {
                 'node': '>=7.6'
@@ -37,11 +37,7 @@ module.exports = {
             'repo': 'git@github.com:haoliangwu/yuefou-wx-miniapp-server.git',
             'path': '/home/ubuntu/yuefou-wx-miniapp-server',
             'ssh_options': ['StrictHostKeyChecking=no', 'PasswordAuthentication=no'],
-            'post-deploy': 'yarn install && yarn start',
-            'env': {
-                'NODE_ENV': 'development',
-                'DEBUG': '*,-nodemon:*,-nodemon,-knex:pool'
-            }
+            'post-deploy': 'yarn install && yarn start'
         }
     }
 }
