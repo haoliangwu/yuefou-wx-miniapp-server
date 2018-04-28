@@ -41,7 +41,7 @@ tnpm start
 ## 项目结构
 
 ```
-koa-weapp-demo
+yuefou-wx-miniapp-server
 ├── README.md
 ├── app.js
 ├── controllers
