@@ -11,12 +11,17 @@ app.use(response)
 // 解析请求体
 app.use(bodyParser())
 
-// 引入路由分发
-const router = require('./routes/weapp')
-app.use(router.routes())
+// wx wafer2
+const weappRouter = require('./routes/weapp')
+app.use(weappRouter.routes())
 
+// graphql
 const graphqlRouter = require('./routes/graphql')
 app.use(graphqlRouter.routes())
+
+// api
+const apiRouter = require('./routes/api')
+app.use(apiRouter.routes())
 
 // 启动程序，监听端口
 app.listen(config.port, () => debug(`listening on port ${config.port}`))

@@ -39,6 +39,7 @@ const CONF = {
 
     // 微信登录态有效期
     wxLoginExpires: 7200,
+    wxMessageToken: 'abcdefgh',
 
     // 其他配置 ...
     serverHost: 'littlelyon.com',
@@ -48,7 +49,6 @@ const CONF = {
     qcloudAppId: process.env.COS_APP_ID,
     qcloudSecretId: process.env.COS_SECRET_ID,
     qcloudSecretKey: process.env.COS_SECRET_KEY,
-    wxMessageToken: 'abcdefgh',
     networkTimeout: 30000
 }
 

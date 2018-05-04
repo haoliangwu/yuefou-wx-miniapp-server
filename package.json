@@ -35,6 +35,8 @@
         "node-fetch": "^2.1.2",
         "nodemon": "^1.17.3",
         "pify": "^2.3.0",
+        "request": "^2.85.0",
+        "request-promise-native": "^1.0.5",
         "wafer-node-sdk": "^1.1.1"
     },
     "devDependencies": {
