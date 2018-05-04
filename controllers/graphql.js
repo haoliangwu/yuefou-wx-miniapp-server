@@ -7,7 +7,7 @@ const gql = require('graphql-tag')
 const fetch = require('node-fetch')
 // const debug = require('debug')('graphql-route')
 
-const GRAPHQL_ENDPOINT = 'http://yuefou_graphql.littlelyon.com'
+const GRAPHQL_ENDPOINT = 'http://yuefou_dev.littlelyon.com/graphql'
 // const GRAPHQL_ENDPOINT = 'http://58.87.91.173:3000'
 
 const link = new HttpLink({
