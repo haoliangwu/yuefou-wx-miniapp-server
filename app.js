@@ -12,7 +12,7 @@ app.use(response)
 app.use(bodyParser())
 
 // 引入路由分发
-const router = require('./routes')
+const router = require('./routes/weapp')
 app.use(router.routes())
 
 const graphqlRouter = require('./routes/graphql')
